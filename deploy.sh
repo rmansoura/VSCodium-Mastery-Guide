@@ -19,7 +19,9 @@ echo "✅ Files staged and committed."
 
 # 3. CREATE REMOTE REPO AND LINK (GH CLI Practice)
 # Creates a public repo on GitHub and sets the remote origin URL to SSH
-gh repo create "$REPO_NAME" --public --remote=origin
+#gh repo create "$REPO_NAME" --public --remote=origin
+gh repo create "$REPO_NAME" --public --remote=origin --source=.
+
 if [ $? -eq 0 ]; then
     echo "✅ Remote repository created and linked via SSH."
 else
